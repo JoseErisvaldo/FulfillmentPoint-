@@ -17,10 +17,12 @@ export default function SideBar() {
     }
   }
   return (
-    <div className={`w-full  ${sideBar ? 'sm:w-14' : 'sm:w-56'} `}>
+    <div className={` ${sideBar ? '' : 'sm:w-60'} `}>
       <div
         onClick={handleSideBar}
-        className="flex justify-end text-3xl cursor-pointer text-white p-3 bg-slate-600"
+        className={` ${
+          sideBar ? 'h-screen' : ''
+        } flex justify-end text-3xl cursor-pointer text-white p-3 bg-slate-600`}
       >
         {sideBar ? <IoMenu /> : <IoIosClose />}
       </div>

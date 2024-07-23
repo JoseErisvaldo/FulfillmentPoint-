@@ -13,6 +13,7 @@ export default function RoutesApp() {
         <div className="m-2 border rounded p-2 border-l-indigo-100 w-full">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/produtos" element={<Products />} />
           </Routes>
         </div>
       </div>

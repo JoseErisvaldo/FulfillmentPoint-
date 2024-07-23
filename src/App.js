@@ -3,7 +3,7 @@ import RoutesApp from './Routes'
 
 function App() {
   return (
-    <div className="">
+    <div className=" font-extralight ">
       <RoutesApp />
     </div>
   )
