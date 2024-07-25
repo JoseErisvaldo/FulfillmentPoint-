@@ -6,7 +6,6 @@ export default function TableProducts() {
       criado: '2023-07-24',
       nome: 'Produto 1',
       preço: 10.0,
-      quantidade: 100,
       categoria: 'Categoria 1',
       descrição: 'Descrição do produto 1'
     },
@@ -16,7 +15,6 @@ export default function TableProducts() {
       criado: '2023-07-25',
       nome: 'Produto 2',
       preço: 20.0,
-      quantidade: 200,
       categoria: 'Categoria 2',
       descrição: 'Descrição do produto 2'
     },
@@ -26,7 +24,6 @@ export default function TableProducts() {
       criado: '2023-07-26',
       nome: 'Produto 3',
       preço: 30.0,
-      quantidade: 300,
       categoria: 'Categoria 3',
       descrição: 'Descrição do produto 3'
     }
@@ -51,9 +48,6 @@ export default function TableProducts() {
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
               Preço
-            </th>
-            <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
-              Quantidade
             </th>
             <th className="px-6 py-3 text-left text-xs font-medium uppercase tracking-wider">
               Categoria
@@ -83,9 +77,6 @@ export default function TableProducts() {
                 {product.preço.toFixed(2)}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
-                {product.quantidade}
-              </td>
-              <td className="px-6 py-4 whitespace-nowrap">
                 {product.categoria}
               </td>
               <td className="px-6 py-4 whitespace-nowrap">
@@ -94,9 +85,6 @@ export default function TableProducts() {
               <td className="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
                 <button className="text-indigo-600 hover:text-indigo-900 mr-2">
                   Editar
-                </button>
-                <button className="text-red-600 hover:text-red-900">
-                  Deletar
                 </button>
               </td>
             </tr>
