@@ -1,3 +1,5 @@
+import AddProducts from '../../Components/CompoProducts/AddProducts'
+import TableProducts from '../../Components/CompoProducts/TableProducts'
 import HeaderNavigate from '../../Components/Ux/HeaderNavigate/HeaderNavigate'
 import TitlePages from '../../Components/Ux/TitlePages/TitlePages'
 
@@ -13,6 +15,8 @@ export default function Products() {
         title={'Produtos'}
         message={'Gerencie seus produtos e visualize seus detalhes.'}
       />
+      <AddProducts />
+      <TableProducts />
     </div>
   )
 }
