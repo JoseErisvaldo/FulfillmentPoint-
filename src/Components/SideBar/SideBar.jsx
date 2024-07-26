@@ -44,6 +44,14 @@ export default function SideBar() {
             <span>
               <AiOutlineProduct />
             </span>
+            <Link to={'/agendas'}>
+              <span>Agendas</span>
+            </Link>
+          </li>
+          <li className="flex gap-1 items-center p-2 cursor-pointer hover:text-slate-900 hover:border-b">
+            <span>
+              <AiOutlineProduct />
+            </span>
             <Link to={'/produtos'}>
               <span>Produtos</span>
             </Link>
