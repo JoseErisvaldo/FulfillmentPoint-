@@ -1,8 +1,9 @@
 import React from 'react'
 
-export default function Input({ type, name, value, onChange }) {
+export default function Input({ type, name, value, onChange, placeholder }) {
   return (
     <input
+      placeholder={placeholder}
       type={type}
       name={name}
       value={value}
