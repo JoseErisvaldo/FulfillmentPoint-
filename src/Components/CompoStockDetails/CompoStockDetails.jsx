@@ -2,8 +2,14 @@ import { Link, useParams } from 'react-router-dom'
 import Input from '../Ux/Input/Input'
 import Button from '../Ux/Button/Button'
 import { MdOutlineAddPhotoAlternate } from 'react-icons/md'
+import Loading from '../Ux/Loading/Loading'
+import { useState } from 'react'
+import Message from '../Ux/Message/Message'
 
 export default function CompoStockDetails() {
+  const [isLoading, setIsLoading] = useState(false)
+  const [isMessage, setIsMessage] = useState(false)
+  const [statusEvent, setStatusEvent] = useState('')
   const fakeProducts = [
     {
       sku: 1,
@@ -105,16 +111,40 @@ export default function CompoStockDetails() {
     }
   ]
 
-  console.log(fakeProducts)
-
   const { sku } = useParams()
-
   const product = fakeProducts.find(p => p.sku === parseInt(sku, 10))
+
+  function handleUpdateProduct(e) {
+    e.preventDefault()
+
+    setIsLoading(true)
+
+    setTimeout(() => {
+      setIsLoading(false)
+      setIsMessage(true)
+      setStatusEvent('success')
+      setTimeout(() => {
+        setIsMessage(false)
+      }, 2000)
+    }, 2000)
+  }
 
   return (
     <div className="p-4 overflow-x-auto">
       <div className="flex justify-end">
-        <Button title={'Salvar'} bg={'blue'} color={'white'} />
+        {isMessage && (
+          <Message
+            statusEvent={statusEvent}
+            children="Produto atualizado com sucesso!"
+          />
+        )}
+
+        <Button
+          onClick={handleUpdateProduct}
+          icon={isLoading ? <Loading /> : null}
+          title={'Salvar'}
+          disabled={isLoading}
+        />
       </div>
       {product && (
         <div className="relative w-full overflow-auto">
@@ -157,6 +187,7 @@ export default function CompoStockDetails() {
                     className="mt-1 h-32 block w-full rounded-md border p-1"
                     placeholder="description"
                     value={product.description}
+                    readOnly
                   />
                 </label>
               </div>
@@ -254,7 +285,6 @@ export default function CompoStockDetails() {
                   <td className="h-12 px-4 align-middle font-medium text-muted-foreground text-right">
                     {wh.name}
                   </td>
-
                   <td className="h-12 px-4 text-left align-middle font-medium text-muted-foreground">
                     {wh.status}
                   </td>
