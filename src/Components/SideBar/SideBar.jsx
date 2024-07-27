@@ -56,12 +56,14 @@ export default function SideBar() {
               <span>Produtos</span>
             </Link>
           </li>
-          <li className="flex gap-1 items-center p-2 cursor-pointer hover:text-slate-900 hover:border-b">
-            <span>
-              <AiOutlineProduct />
-            </span>
-            <span>Estoque</span>
-          </li>
+          <Link to={'/estoque'}>
+            <li className="flex gap-1 items-center p-2 cursor-pointer hover:text-slate-900 hover:border-b">
+              <span>
+                <AiOutlineProduct />
+              </span>
+              <span>Estoque</span>
+            </li>
+          </Link>
           <li className="flex gap-1 items-center p-2 cursor-pointer hover:text-slate-900 hover:border-b">
             <span>
               <CgClipboard />

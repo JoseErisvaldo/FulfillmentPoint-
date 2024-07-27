@@ -4,6 +4,8 @@ import NavBar from './Components/NavBar/NavBar'
 import Products from './Pages/Products/Products'
 import SideBar from './Components/SideBar/SideBar'
 import Schedules from './Pages/Schedules/Schedules'
+import Stock from './Pages/Stock/Stock'
+import StockDetails from './Pages/Stock/StockDetails'
 
 export default function RoutesApp() {
   return (
@@ -16,6 +18,11 @@ export default function RoutesApp() {
             <Route path="/" element={<Home />} />
             <Route path="/agendas" element={<Schedules />} />
             <Route path="/produtos" element={<Products />} />
+            <Route path="/estoque" element={<Stock />} />
+            <Route
+              path="estoque/detalhesestoque/:sku"
+              element={<StockDetails />}
+            />
           </Routes>
         </div>
       </div>
