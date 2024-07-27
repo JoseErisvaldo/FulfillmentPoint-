@@ -1,0 +1,25 @@
+.is-active {
+  animation: display 2s;
+  position: absolute;
+  right: 0;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0.1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+  90% {
+    opacity: 0.8;
+  }
+  95% {
+    opacity: 0.5;
+    right: 5%;
+  }
+  100% {
+    opacity: 0.1;
+    right: -10%;
+  }
+}
