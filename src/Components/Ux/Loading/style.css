@@ -1,0 +1,9 @@
+.is-loading {
+  animation: identifier 2s infinite;
+}
+
+@keyframes identifier {
+  0% {
+    rotate: -360deg;
+  }
+}
