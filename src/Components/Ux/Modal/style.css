@@ -1,0 +1,9 @@
+.is-open {
+  animation: display 1s;
+}
+
+@keyframes display {
+  0% {
+    opacity: 0.1;
+  }
+}
