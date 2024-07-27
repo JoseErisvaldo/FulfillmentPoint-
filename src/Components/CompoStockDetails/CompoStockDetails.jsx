@@ -113,6 +113,9 @@ export default function CompoStockDetails() {
 
   return (
     <div className="p-4 overflow-x-auto">
+      <div className="flex justify-end">
+        <Button title={'Salvar'} bg={'blue'} color={'white'} />
+      </div>
       {product && (
         <div className="relative w-full overflow-auto">
           <h1 className="font-bold text-1xl">
